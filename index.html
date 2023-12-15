@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimba Escapamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Barra de Navegação -->
+    <nav>
+        <h1>Zimba Escapamentos</h1>
+        <ul>
+            <li><a href="#sobre">Home</a></li>
+            <li><a href="#produtos">Sobre</a></li>
+            <li><a href="#contato">Produtos</a></li>
+            <li><a href="#contato">Contatos</a></li>
+        </ul>
+    </nav>
+    <div class="text-top-h3">
+            <h3>Zimba<span> Escapamentos</span></h3>
+    </div>
+
+    <!-- Sessão Sobre -->
+    <section id="sobre" class="sobre-container">
+        <div class="sobre-texto">
+            <h2>Sobre a Zimba Escapamentos</h2>
+            <p>Na Zimba Escapamentos, adotamos a missão de elevar a experiência automotiva através da oferta de escapamentos excepcionais, moldados com precisão e alimentados pela nossa paixão pela inovação e qualidade sonora. Há anos, temos sido uma referência no mercado, entregando produtos que não apenas impulsionam o desempenho do seu veículo, mas também aprimoram a sua jornada com um som único e inconfundível.</p>
+        </div>
+        <div class="sobre-imagem">
+            <img src="assets/zimba-escapamentos.jpg" alt="Zimba Escapamentos">
+        </div>
+    </section>
+
+
+    <!-- Sessão Produtos -->
+    <section id="produtos">
+        <h2>Nossos Produtos</h2>
+
+        <!-- Filtro de Produtos -->
+        <div class="filtro">
+            <label for="tipoEscapamento">Filtrar por:</label>
+            <select id="tipoEscapamento" onchange="filtrarProdutos()">
+                <option value="todos">Todos</option>
+                <option value="carro">Carro</option>
+                <option value="moto">Moto</option>
+            </select>
+        </div>
+
+        <!-- Cards de Produtos -->
+        <div class="card-container">
+            <div class="card" data-tipo="carro">
+                <img src="https://http2.mlstatic.com/escapamento-esportivo-ponteira-cb300-ronco-cb500-inox-D_NQ_NP_785249-MLB31650432777_082019-F.jpg" alt="Escapamento X">
+                <h3>Escapamento ZX 9</h3>
+                <p>Escapamento para carro</p>
+                <p>Preço: R$ 100,00</p>
+                <button onclick="adicionarAoCarrinho('Escapamento ZX 9')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card" data-tipo="carro">
+                <img src="https://http2.mlstatic.com/escapamento-esportivo-fusca-kombi-brasilia-tipo-kadron-D_NQ_NP_197301-MLB20318990106_062015-F.jpg" alt="Escapamento R">
+                <h3>Escapamento TURBO X</h3>
+                <p>Escapamento para carro</p>
+                <p>Preço: R$ 100,00</p>
+                <button onclick="adicionarAoCarrinho('Escapamento TURBO X')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card" data-tipo="moto">
+                <img src="https://www.jademotopecas.com.br/arquivos/PRODUTOS/3571530815963318998/1308_GG_Escapamento-Escape-Esportivo-Titan-150-Fan-1.jpg" alt="Escapamento Z">
+                <h3>Escapamento LIGHT Z</h3>
+                <p>Escapamento para moto</p>
+                <p>Preço: R$ 100,00</p>
+                <button onclick="adicionarAoCarrinho('Escapamento LIGHT Z')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card" data-tipo="carro">
+                <img src="https://tse4.mm.bing.net/th?id=OIP._J3i7VGsXQWIvxpBExstKQHaFi&pid=Api&P=0&h=180" alt="Escapamento B">
+                <h3>Escapamento Z4F</h3>
+                <p>Escapamento para carro</p>
+                <p>Preço: R$ 100,00</p>
+                <button onclick="adicionarAoCarrinho('Escapamento Z4F')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card" data-tipo="moto">
+                <img src="https://http2.mlstatic.com/escapamento-crf-230-pro-tork-powercore-788-ponteira-curva-D_NQ_NP_16859-MLB20127053405_072014-F.jpg" alt="Escapamento K">
+                <h3>Escapamento TURBO X2</h3>
+                <p>Escapamento para moto</p>
+                <p>Preço: R$ 100,00</p>
+                <button onclick="adicionarAoCarrinho('Escapamento TURBO X2K')">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <!-- Carrinho de Compras -->
+        <div id="carrinho">
+            <h2>Carrinho de Compras</h2>
+            <div id="mensagemAdicao"></div>
+            <ul id="itensCarrinho"></ul>
+            <div id="infoCarrinho">Itens no carrinho: <span id="contagemCarrinho">0</span></div>
+            <button id="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <!-- Sessão Contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Para mais informações, entre em contato conosco pelo número de WhatsApp: <a href="https://wa.me/5548996728085" target="_blank">48 99672-8085</a></p>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>Zimba<span> Escapamentos</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                |
+                <a href="#sobre">Sobre</a>
+                |
+                <a href="#produtos">Produtos</a>
+                |
+                <a href="#footer">Contatos</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Zimaba Escapamentos</strong> todos os direitos reservados</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>
+                    Contatos</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+55 48 99672-8085</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:sagar00001.co@gmail.com">zimba-escapamentos@gmail.com.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Nossa localização</span>
+                <strong>Zimba Escapamentos</strong> Rod. Governador Mário Covas - Aririu, Palhoça - SC, 88135-035
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+        
+
+    <!-- JavaScript -->
+    <script src="buy-product.js"></script>
+</body>
+
+</html>
